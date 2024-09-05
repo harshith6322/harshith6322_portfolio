@@ -5,18 +5,18 @@ import dotenv from "dotenv";
 dotenv.config();
 import { rateLimit } from "express-rate-limit";
 import zod from "zod";
+import cors from "cors";
+const app = express();
+app.use(json());
+app.use(cors());
+const PORT = 3000;
 
 const rateemail = rateLimit({
   windowMs: 1 * 60 * 1000, // in 1min
-  limit: 6, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
+  limit: 1, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
   standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
 });
-
-const app = express();
-const PORT = 3000;
-
-app.use(json());
 
 const transporter = createTransport({
   service: "gmail",
@@ -27,9 +27,9 @@ const transporter = createTransport({
 });
 
 const zodemail = zod.object({
-  fullname: zod.string().min(5),
-  email: zod.string().email().trim().min(5),
-  message: zod.string().min(5),
+  fullname: zod.string().min(3),
+  email: zod.string().email().trim().min(3),
+  message: zod.string().min(3),
 });
 
 app.post("/send-email", rateemail, (req, res) => {
@@ -55,7 +55,7 @@ app.post("/send-email", rateemail, (req, res) => {
       console.log(error); // Log the error
       return res.status(500).json({ message: "Error sending email", error });
     }
-    res.status(200).json({ message: "Email sent successfully", info });
+    res.status(200).json({ message: "Email sent successfully" });
   });
 });
 
