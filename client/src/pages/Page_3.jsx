@@ -33,7 +33,7 @@ function Page_3() {
         <Card
           name={"Notes App"}
           imge={
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_DYxgzZm3hECBYAmkH1xAHtMr6nb_HU_sQim4i8c0F4rCnCgTX0a-rvmEi2obLmsYTOA&usqp=CAU"
+            "https://png.pngtree.com/png-vector/20221110/ourmid/pngtree-neon-education-icon-for-web-and-mobile-computer-vector-note-vector-png-image_41057604.jpg"
           }
           src={"https://github.com/harshith6322/NOTES_APP_BACKEND"}
         />

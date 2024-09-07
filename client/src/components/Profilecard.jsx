@@ -2,9 +2,9 @@ import Button from "./Button";
 
 function Profilecard() {
   return (
-    <div className=" w-[100%] h-[100%] flex max-sm:flex-col max-sm:p-2">
-      <div className="w-[30%] h-[100%] flex items-center max-sm:w-full max-sm:justify-center max-sm:items-end max-sm:h-[35%]">
-        <div className="w-[350px] h-[350px] p-1 rounded-full bg-gradient-to-br from-purple-600 to-blue-500 ml-5 max-sm:w-[200px] max-sm:h-[200px]">
+    <div className=" w-[100%] h-[100%] flex max-sm:flex-col max-sm:p-3 max-sm:mt-10">
+      <div className="w-[30%] h-[100%] flex items-center max-sm:w-full max-sm:justify-center max-sm:items-end max-sm:h-[35%] ">
+        <div className="w-[350px] h-[350px] p-1 rounded-full bg-gradient-to-br from-purple-600 to-blue-500 ml-5 max-sm:w-[200px] max-sm:h-[200px] ">
           <img
             src="/assets/MY.gif"
             alt="mypic"

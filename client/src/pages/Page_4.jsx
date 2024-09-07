@@ -2,7 +2,7 @@ import Icons from "../components/Icons";
 
 function Page_4() {
   return (
-    <div className=" w-full h-[50%]  max-sm:h-[45%] ">
+    <div className=" w-full h-[50%]  max-sm:h-[45%]">
       <div className="max-sm:mt-14">
         <h1 className="text-4xl font-medium capitalize text-center text-white ">
           Socials
@@ -37,9 +37,11 @@ function Page_4() {
           </Icons>
         </div>
       </div>
-      <footer className="w-full h-300px p-5 max-sm:">
-        <p className="text-center text-xl text-white">@harshith6322</p>
-      </footer>
+      <div>
+        <footer className="w-full h-[10%] p-5 ">
+          <p className="text-center text-xl text-white">@harshith6322</p>
+        </footer>
+      </div>
     </div>
   );
 }

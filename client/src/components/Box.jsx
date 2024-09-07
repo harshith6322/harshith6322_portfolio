@@ -4,7 +4,7 @@ import Button_1 from "./Button_1";
 function Box() {
   return (
     <div className=" w-full h-full ">
-      <h1 className=" text-4xl font-medium capitalize text-center  max-sm:text-3xl max-sm:p-2.5 max-sm:mt-2">
+      <h1 className=" text-4xl font-medium capitalize text-center  max-sm:text-3xl max-sm:p-2.5 max-sm:mt-20">
         what i know
       </h1>
       <div className=" w-full h-full flex max-sm:flex-col">
