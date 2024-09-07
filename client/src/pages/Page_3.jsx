@@ -8,7 +8,7 @@ function Page_3() {
           Projects
         </h1>
       </div>
-      <div className=" flex w-full h-full gap-6 mt-28 flex-wrap justify-center  px-8 max-sm:mt-10 max-sm:gap-0">
+      <div className=" flex w-full h-full gap-6 mt-28 flex-wrap justify-center  px-8 max-sm:mt-10 max-sm:gap-0 max-sm:px-4">
         <Card
           name={"dall-e clone"}
           imge={

@@ -3,7 +3,7 @@ function Boxmodel({ heading, children }) {
   return (
     <div
       className="w-[23%] h-[80%] bg-slate-800 ml-5 mt-10 p-5 rounded-md overflow-hidden 
-      max-sm:w-full max-sm:h-[200px] max-sm:ml-0 max-sm:mt-1 max-sm:p-5 max-sm:bg-transparent"
+      max-sm:w-full max-sm:h-[200px] max-sm:ml-0 max-sm:mt-1 max-sm:p-5 max-sm:bg-transparent max-sm:flex-wrap"
     >
       <h1 className="text-2xl text-white text-center max-sm:text-lg max-sm:font-extrabold">
         {heading}

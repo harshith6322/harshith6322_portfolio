@@ -2,14 +2,14 @@ import Icons from "../components/Icons";
 
 function Page_4() {
   return (
-    <div className=" w-full h-[50%]  max-sm:h-[45%]">
-      <div className="max-sm:mt-14">
+    <div className=" w-full h-[60%]  max-sm:h-[60%]">
+      <div className="max-sm:mt-10">
         <h1 className="text-4xl font-medium capitalize text-center text-white ">
           Socials
         </h1>
       </div>
       <div className=" w-[100%] h-[100%]  flex justify-center mt-5">
-        <div className=" w-[60%] h-[200px] flex gap-10 flex-wrap justify-center items-center max-sm:mt-5">
+        <div className=" w-[60%] h-[200px] flex gap-10 flex-wrap justify-center items-center max-sm:mt-10">
           <Icons
             border={"b"}
             src={"https://www.linkedin.com/in/harshith-reddy-212279211/"}
@@ -36,11 +36,6 @@ function Page_4() {
             <polyline points="2 12 12 17 22 12"></polyline>
           </Icons>
         </div>
-      </div>
-      <div>
-        <footer className="w-full h-[10%] p-5 ">
-          <p className="text-center text-xl text-white">@harshith6322</p>
-        </footer>
       </div>
     </div>
   );

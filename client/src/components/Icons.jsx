@@ -3,7 +3,7 @@ function Icons({ border, src, children }) {
   return (
     <div
       className={`w-[100px] h-[100px] rounded-full border-2 z-0
-        flex justify-center items-center ${
+        flex justify-center items-center max-sm:w-[90px] max-sm:h-[90px] max-sm:rounded-full max-sm:mt-5 ${
           border === "v"
             ? "border-violet-600"
             : border === "b"
