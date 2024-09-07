@@ -11,6 +11,7 @@ function ContactForm({ setopen }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isLoading, setisloading] = useState(false);
 
   const zodSchema = z.object({
     name: z.string().min(3, { message: "Invalid name" }),
@@ -21,7 +22,6 @@ function ContactForm({ setopen }) {
   // Handle form submission
   async function Handlesubmit(event) {
     event.preventDefault(); // Prevent the default form submission
-
     const { success, error } = zodSchema.safeParse({
       name,
       email,
@@ -29,6 +29,7 @@ function ContactForm({ setopen }) {
     });
 
     if (success) {
+      setisloading(true);
       try {
         // Directly call the axios.post with await inside the try block
         const ress = await axios.post(API, {
@@ -38,6 +39,7 @@ function ContactForm({ setopen }) {
         });
 
         if (ress.status === 200) {
+          setisloading(false);
           toast(`✔️ ${ress.data.message}`, {
             position: "top-right",
             autoClose: 5000,
@@ -52,7 +54,7 @@ function ContactForm({ setopen }) {
         }
       } catch (error) {
         // Catch errors from axios and other issues
-
+        setisloading(false);
         if (error.response && error.response.status === 429) {
           toast(`❌ Too Many Requests`, {
             position: "top-right",
@@ -66,7 +68,7 @@ function ContactForm({ setopen }) {
           });
         } else {
           // For other errors
-          toast.error("❌ Failed to send message.", {
+          toast.error("Failed to send message.", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -77,9 +79,12 @@ function ContactForm({ setopen }) {
             theme: "dark",
           });
         }
+      } finally {
+        setisloading(false);
       }
     } else {
       // Handle validation errors, e.g., show error messages
+      setisloading(false);
       const error1 = error.issues[0].message;
       toast(`❌ ${error1}`, {
         position: "top-right",
@@ -98,7 +103,7 @@ function ContactForm({ setopen }) {
   return (
     <>
       <div className=" fixed right-5 top-5 cursor-pointer">&#x2716;</div>
-      <div className="w-screen h-screen absolute top-0 left-0 flex justify-center items-center backdrop-blur-sm bg-black/50 z-50">
+      <div className="w-screen h-screen absolute top-0 left-0 flex justify-center items-center backdrop-blur-lg bg-black/50 z-50">
         <button onClick={() => setopen((o) => !o)}>
           <div className=" fixed right-5 top-5 cursor-pointer">&#x2716;</div>
         </button>
@@ -155,9 +160,10 @@ function ContactForm({ setopen }) {
             className="relative inline-flex items-center justify-center p-0.5 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white w-full"
             type="submit"
             onClick={Handlesubmit}
+            disabled={isLoading ? true : false}
           >
-            <span className="relative px-8 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 w-full">
-              Contact Me
+            <span className="relative px-8 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 w-full text-base">
+              {isLoading ? "Sending..." : "Submit"}
             </span>
           </button>
         </div>
