@@ -2,14 +2,14 @@ import Icons from "../components/Icons";
 
 function Page_4() {
   return (
-    <div className=" w-full h-[60%]  max-sm:h-[60%]">
-      <div className="max-sm:mt-15">
-        <h1 className="text-4xl font-medium capitalize text-center text-white ">
+    <div className=" w-full h-[60%]  max-sm:h-[50%]">
+      <div className="max-sm:mt-14">
+        <h1 className="text-4xl font-medium capitalize text-center text-white max-sm:pt-5">
           Socials
         </h1>
       </div>
-      <div className=" w-[100%] h-[100%]  flex justify-center mt-5">
-        <div className=" w-[60%] h-[200px] flex gap-10 flex-wrap justify-center items-center max-sm:mt-10 max-sm:w-[100%] max-sm:gap-12 max-sm:px-5">
+      <div className=" w-[100%] h-[100%]  flex justify-center mt-2 max-sm:mt-0">
+        <div className=" w-[60%] h-[200px] flex gap-10 flex-wrap justify-center items-center max-sm:mt-10 max-sm:w-[100%] max-sm:gap-y-5 max-sm:px-5 max-sm:gap-x-7">
           <Icons
             border={"b"}
             src={"https://www.linkedin.com/in/harshith-reddy-212279211/"}
