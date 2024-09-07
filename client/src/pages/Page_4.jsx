@@ -3,13 +3,13 @@ import Icons from "../components/Icons";
 function Page_4() {
   return (
     <div className=" w-full h-[60%]  max-sm:h-[60%]">
-      <div className="max-sm:mt-10">
+      <div className="max-sm:mt-15">
         <h1 className="text-4xl font-medium capitalize text-center text-white ">
           Socials
         </h1>
       </div>
       <div className=" w-[100%] h-[100%]  flex justify-center mt-5">
-        <div className=" w-[60%] h-[200px] flex gap-10 flex-wrap justify-center items-center max-sm:mt-10">
+        <div className=" w-[60%] h-[200px] flex gap-10 flex-wrap justify-center items-center max-sm:mt-10 max-sm:w-[100%] max-sm:gap-12 max-sm:px-5">
           <Icons
             border={"b"}
             src={"https://www.linkedin.com/in/harshith-reddy-212279211/"}

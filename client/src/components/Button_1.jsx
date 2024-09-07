@@ -2,7 +2,7 @@
 function Button_1({ name, border }) {
   return (
     <div
-      className={`w-[110px] h-[40px] text-base font-medium bg-slate-900 text-white text-center rounded-lg flex items-center justify-center uppercase mt-3 flex-wrap max-sm:w-[90px] max-sm:h-[33px] max-sm:bg-slate-700 ${
+      className={`w-[110px] h-[40px] text-base font-medium bg-slate-900 text-white text-center rounded-lg flex items-center justify-center uppercase mt-3 flex-wrap max-sm:w-[85px] max-sm:h-[33px] max-sm:bg-slate-700 ${
         border === "b"
           ? "border border-blue-500"
           : border === "v"
