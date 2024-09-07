@@ -103,7 +103,7 @@ function ContactForm({ setopen }) {
   return (
     <>
       <div className=" fixed right-5 top-5 cursor-pointer">&#x2716;</div>
-      <div className="w-screen h-screen absolute top-0 left-0 flex justify-center items-center backdrop-blur-lg bg-black/50 z-50">
+      <div className="w-screen h-screen absolute top-0 left-0 flex justify-center items-center backdrop-blur-lg bg-black/50 z-50 ">
         <button onClick={() => setopen((o) => !o)}>
           <div className=" fixed right-5 top-5 cursor-pointer">&#x2716;</div>
         </button>

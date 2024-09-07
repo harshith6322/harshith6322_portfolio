@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 /* For modern browsers */
+
+* {
+  scroll-behavior: smooth;
+}
 ::-webkit-scrollbar {
   width: 8px;
   height: 10px;
@@ -12,47 +16,4 @@
   background-color: #020617; /* Color of the scrollbar thumb */
   border-radius: 9999px; /* Fully rounded edges */
   border: 2px solid transparent; /* Padding around thumb */
-}
-
-.css-selector {
-  background: linear-gradient(185deg, #9333ea, #3b82f6);
-  background-size: 400% 400%;
-
-  -webkit-animation: AnimationName 0s ease infinite;
-  -moz-animation: AnimationName 0s ease infinite;
-  animation: AnimationName 0s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-  0% {
-    background-position: 0% 4%;
-  }
-  50% {
-    background-position: 100% 97%;
-  }
-  100% {
-    background-position: 0% 4%;
-  }
-}
-@-moz-keyframes AnimationName {
-  0% {
-    background-position: 0% 4%;
-  }
-  50% {
-    background-position: 100% 97%;
-  }
-  100% {
-    background-position: 0% 4%;
-  }
-}
-@keyframes AnimationName {
-  0% {
-    background-position: 0% 4%;
-  }
-  50% {
-    background-position: 100% 97%;
-  }
-  100% {
-    background-position: 0% 4%;
-  }
 }

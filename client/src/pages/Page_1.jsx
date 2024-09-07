@@ -5,7 +5,7 @@ import Profilecard from "../components/Profilecard";
 function Page_1() {
   return (
     <>
-      <div className=" text-white w-full h-full ">
+      <div className=" text-white w-full h-full" id="p1">
         <Navbar />
         <Profilecard />
         {/* <Sidebar /> */}

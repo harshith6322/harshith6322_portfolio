@@ -3,11 +3,11 @@ import Button_1 from "./Button_1";
 
 function Box() {
   return (
-    <div className=" w-full h-full">
-      <h1 className=" text-4xl font-medium capitalize text-center mt-10 px-10">
+    <div className=" w-full h-full ">
+      <h1 className=" text-4xl font-medium capitalize text-center  max-sm:text-3xl max-sm:p-2.5 max-sm:mt-2">
         what i know
       </h1>
-      <div className=" w-full h-full flex  ">
+      <div className=" w-full h-full flex max-sm:flex-col">
         <Boxmodel heading={"Frontend"}>
           <Button_1 name={"html"} border={"b"} />
           <Button_1 name={"css"} border={"v"} />
@@ -15,21 +15,20 @@ function Box() {
           <Button_1 name={"react.js"} border={"v"} />
           <Button_1 name={"typescript"} />
           <Button_1 name={"next.js"} />
-          <Button_1 name={"tailwind.css"} border={"b"} />
+          <Button_1 name={"tailwind"} border={"b"} />
         </Boxmodel>
         <Boxmodel heading={"Backend"}>
           <Button_1 name={"node"} border={"v"} />
           <Button_1 name={"express.js"} border={"b"} />
           <Button_1 name={"hono.js"} />
           <Button_1 name={"jwt"} border={"v"} />
-          <Button_1 name={"kafka"} />
-          <Button_1 name={"auth"} border={"b"} />
+          <Button_1 name={"nextauth"} />
         </Boxmodel>
         <Boxmodel heading={"Devops"}>
           <Button_1 name={"docker"} border={"v"} />
           <Button_1 name={"git"} border={"b"} />
           <Button_1 name={"ci/cd"} border={"v"} />
-          <Button_1 name={"kafka"} />
+          <Button_1 name={"k8s"} />
           <Button_1 name={"aws"} border={"b"} />
           <Button_1 name={"kafka"} />
         </Boxmodel>
