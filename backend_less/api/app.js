@@ -11,22 +11,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// const rateemail = rateLimit({
-//   windowMs: 1 * 60 * 1000, // 1 minute
-//   limit: 10, // Limit each IP to 10 requests per window
-//   standardHeaders: true,
-//   legacyHeaders: false,
-//   validate: {
-//     validationsConfig: false,
-//     // ...
-//     default: true,
-//   },
-// });
 const rateemail = rateLimit({
-  windowMs: 1 * 60 * 1000, // in 1min
-  limit: 1, // Limit each IP to 10 requests per `window` (here, per minute)
-  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
-  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+  windowMs: 1 * 60 * 1000, // 1 minute
+  limit: 5, // Limit each IP to 10 requests per window
+  standardHeaders: true,
+  legacyHeaders: false,
 });
 
 const transporter = createTransport({
