@@ -8,16 +8,17 @@ import cors from "cors";
 dotenv.config();
 
 const app = express();
+app.set("trust proxy", 1);
 app.use(express.json());
 app.use(cors());
 
 const rateemail = rateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
-  limit: 5, // Limit each IP to 10 requests per window
-  standardHeaders: true,
-  legacyHeaders: false,
+  max: 10, // Limit each IP to 10 requests per window
+  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+  keyGenerator: (req) => req.ip, // Ensure rate limiting is based on IP address
 });
-
 const transporter = createTransport({
   service: "gmail",
   auth: {
