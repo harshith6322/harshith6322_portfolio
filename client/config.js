@@ -1,2 +1,1 @@
-export const API =
-  "http://ec2-18-207-199-38.compute-1.amazonaws.com/send-email:3000";
+export const API = "https://harshith6322-portfolio-api.vercel.app/send-email";
