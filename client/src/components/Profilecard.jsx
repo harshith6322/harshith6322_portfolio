@@ -35,7 +35,7 @@ function Profilecard() {
             high-quality, maintainable code that drives results.
           </p>
           <div className=" mt-5 max-sm:flex max-sm:justify-center max-sm:mt-6 ">
-            <Button name={"#Mern stack"} />
+            <Button name={"#Mern"} />
             <Button name={"#Devops"} />
             <Button name={"#Resume"} />
           </div>
