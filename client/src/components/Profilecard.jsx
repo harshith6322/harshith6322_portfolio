@@ -34,9 +34,10 @@ function Profilecard() {
             containerization and orchestration. My goal is to deliver
             high-quality, maintainable code that drives results.
           </p>
-          <div className=" mt-5 max-sm:flex max-sm:justify-center max-sm:mt-10 ">
+          <div className=" mt-5 max-sm:flex max-sm:justify-center max-sm:mt-6 ">
             <Button name={"#Mern stack"} />
             <Button name={"#Devops"} />
+            <Button name={"#Resume"} />
           </div>
         </div>
       </div>
