@@ -6,7 +6,7 @@ function Page_1() {
   return (
     <>
       <div className=" text-white w-full h-full" id="p1">
-        <Navbar />
+        <Navbar zindex={false} />
         <Profilecard />
         {/* <Sidebar /> */}
       </div>

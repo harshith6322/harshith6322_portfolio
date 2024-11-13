@@ -1,10 +1,15 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import ContactForm from "./ContactForm";
 
-function Navbar() {
+function Navbar({ zindex }) {
   const [open, setopen] = useState(false);
   return (
-    <div className="  w-screen h-[70px] px-10 py-4 fixed top-0 bg-slate-950/95 max-md:px-7 max-sm:z-50">
+    <div
+      className={`  w-screen h-[70px] px-10 py-4 fixed top-0 bg-slate-950/95 max-md:px-7 max-sm:z-50 ${
+        zindex ? "z-[10001]" : ""
+      }`}
+    >
       <div className=" flex justify-between items-center text-white">
         <div className=" flex gap-1">
           <div className="rounded-full w-[22px] h-[22px] bg-purple-600"></div>

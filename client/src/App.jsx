@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import gsap from "gsap";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -8,14 +9,37 @@ import Page_2 from "./pages/Page_2";
 import Page_3 from "./pages/Page_3";
 import Page_4 from "./pages/Page_4";
 import Page_5 from "./pages/Page_5";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   const loadingRef = useRef(null);
   const ball1Ref = useRef(null);
   const ball2Ref = useRef(null);
-
   // State to control the loading visibility
   const [isLoading, setIsLoading] = useState(true);
+  const [isBanner, setBanner] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width > 1280) {
+        setBanner(true);
+      } else {
+        // setIsLoading(true);
+        setBanner(false);
+      }
+    };
+
+    // Run on initial mount
+    handleResize();
+    // Attach event listener
+    window.addEventListener("resize", handleResize);
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      setIsLoading(true);
+    };
+  }, []);
 
   useEffect(() => {
     const timeline = gsap.timeline();
@@ -56,6 +80,25 @@ export default function App() {
   return (
     <>
       {/* Loading animation: only show it when isLoading is true */}
+      {isBanner && (
+        <>
+          <Navbar zindex={true} />
+          <section className="bg- w-screen h-screen bg-slate-950 fixed z-[1000] flex flex-row gap-1 justify-center items-center">
+            <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+              <div className="mx-auto max-w-screen-sm text-center">
+                <p className="mb-4 text-3xl tracking-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 md:text-4xl">
+                  This portfolio is optimized for screens up to 1280px wide.
+                  We're working on a layout enhancement for larger screens—stay
+                  tuned!
+                </p>
+                <p className="mb-4 text-xl tracking-tight font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 md:text-2xl">
+                  Feel free to contact me.
+                </p>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
       {isLoading && (
         <div
           className="w-screen h-screen bg-black fixed z-[1000] flex flex-row gap-1 justify-center items-center"
