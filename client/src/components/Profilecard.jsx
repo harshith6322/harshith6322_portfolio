@@ -13,8 +13,8 @@ function Profilecard() {
           />
         </div>
       </div>
-      <div className=" w-[70%] h-full text-slate-300  flex p-5 max-sm:w-[100%] max-sm:h-[65%] max-sm:mt-0  max-xl:text-center max-xl:mt-auto">
-        <div className=" mt-28 ml-18  max-sm:mt-2 max-sm:ml-0">
+      <div className=" w-[70%] h-full text-slate-300  flex p-5 max-sm:w-[100%] max-sm:h-[65%] max-sm:mt-0 2xl:text-center">
+        <div className=" mt-28 ml-18  max-sm:mt-2 max-sm:ml-0 2xl:mt-36">
           <h1 className=" font-extrabold text-5xl capitalize max-sm:text-3xl max-sm:text-center">
             Harshith reddy
           </h1>

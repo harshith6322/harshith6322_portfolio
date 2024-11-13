@@ -15,7 +15,7 @@ export default function App() {
   const ball2Ref = useRef(null);
 
   // State to control the loading visibility
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timeline = gsap.timeline();
