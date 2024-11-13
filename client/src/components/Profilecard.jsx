@@ -2,7 +2,7 @@ import Button from "./Button";
 
 function Profilecard() {
   return (
-    <div className=" w-[100%] h-[100%] flex max-sm:flex-col max-sm:p-3 max-sm:mt-10">
+    <div className=" w-[100%] h-[100%] flex max-sm:flex-col max-sm:p-3 max-sm:mt-10 max-xl:h-[85%]">
       <div className="w-[30%] h-[100%] flex items-center max-sm:w-full max-sm:justify-center max-sm:items-end max-sm:h-[35%] ">
         <div className="w-[350px] h-[350px] p-1 rounded-full bg-gradient-to-br from-purple-600 to-blue-500 ml-5 max-sm:w-[200px] max-sm:h-[200px] ">
           <img
@@ -13,7 +13,7 @@ function Profilecard() {
           />
         </div>
       </div>
-      <div className=" w-[70%] h-full text-slate-300  flex p-5 max-sm:w-[100%] max-sm:h-[65%] max-sm:mt-0">
+      <div className=" w-[70%] h-full text-slate-300  flex p-5 max-sm:w-[100%] max-sm:h-[65%] max-sm:mt-0  max-xl:text-center">
         <div className=" mt-28 ml-18  max-sm:mt-2 max-sm:ml-0">
           <h1 className=" font-extrabold text-5xl capitalize max-sm:text-3xl max-sm:text-center">
             Harshith reddy
